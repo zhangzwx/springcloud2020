@@ -16,3 +16,15 @@ mybatis:
   mapperLocations: classpath:mapper/*.xml
   type-aliases-package: com.atguigu.springcloud.entities
 
+
+eureka:
+  client:
+#    是否注册到eureka
+    register-with-eureka: true
+#    是否从eureka获取自己的信息，主要是rabbion 负载均衡 默认是true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  #集群版
+
+
+
